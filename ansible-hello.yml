@@ -1,0 +1,9 @@
+
+- name: Test Ansible connectivity with custom message
+  hosts: all
+  gather_facts: no
+
+  tasks:
+    - name: Show a custom debug message
+      ansible.builtin.debug:
+        msg: "Hello from {{ inventory_hostname }}! "

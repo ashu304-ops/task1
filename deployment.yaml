@@ -1,0 +1,13 @@
+# ansible-master.yaml
+
+#  same for ansible  master ,node
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ansible-master
+spec:
+  containers:
+  - name: master
+    image: ashu304/ansible-node:latest
+    command: ["/bin/bash", "-c", "--"]
+    args: ["while true; do sleep 30; done;"]
